@@ -32,8 +32,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-readme');
   grunt.loadNpmTasks('grunt-repos');
+  grunt.loadNpmTasks('grunt-sync-pkg');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'nodeunit', 'readme']);
+  grunt.registerTask('default', ['jshint', 'nodeunit', 'readme', 'sync']);
 
 };

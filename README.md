@@ -4,13 +4,23 @@
 
 ## Getting started
 
-Install the module with: `npm install haystack --save`
+### [npm](npmjs.org)
+
+```bash
+npm install haystack --save
+```
+
+### [bower](https://github.com/bower/bower)
+
+```bash
+bower install haystack --save
+```
+
+## Interface
 
 ```js
 var haystack = require('haystack');
 ```
-
-## Interface
 
 ### filter
 
@@ -66,7 +76,7 @@ haystack.filter(['f', 'g'], 'f, h, i', ',');
 ```
 
 ## Contributing
-Find a bug? Have a feature request? Please [create an Issue](https://github.com/sellside/haystack/issues).
+Find a bug? Have a feature request? Please [create an Issue](https://github.com/jonschlinkert/haystack/issues).
 
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt][], and build the documentation with [grunt-readme](https://github.com/assemble/grunt-readme).
 

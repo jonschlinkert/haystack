@@ -4,13 +4,23 @@
 
 ## Getting started
 
-Install the module with: `npm install haystack --save`
+### [npm](npmjs.org)
+
+```bash
+npm install haystack --save
+```
+
+### [bower](https://github.com/bower/bower)
+
+```bash
+bower install haystack --save
+```
+
+## Interface
 
 ```js
 var haystack = require('haystack');
 ```
-
-## Interface
 
 ### filter
 
