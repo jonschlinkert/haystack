@@ -17,13 +17,53 @@ var haystack = require('haystack');
 Creates an array of unique values present in all provided arrays using strict equality for comparisons, i.e. `===`.
 
 ```js
-haystack.filter([1, 2, 3], [5, 2, 1, 4], [2, 1]);
+haystack.filter([1, 2, 3], [5, 2, 1, 4]);
 // => [1, 2]
 
-haystack.filter([1, 2, 3], [5, 2, 1, 4], [2, 1]);
-// => [1, 2]
+haystack.filter('a', ['b', 'a']);
+// => ['a']
+
+haystack.filter(['a', 'b'], 'a');
+// => ['a']
+
+haystack.filter(['c', 'd'], ['d', 'e', 'c']);
+// => ['c', 'd']
+
+haystack.filter(['f', 'g'], 'f, h, i');
+// => []
+
+haystack.filter(['f', 'g'], 'f, h, i', ',');
+// => ['f']
 ```
 
+Optionally pass a string separator as a third parameter.
+
+```js
+haystack.filter(['f', 'b'], 'a,f,k,l', ',');
+// => ['f']
+
+haystack.filter(['find', 'exclude'], 'A find and match utility', ' ');
+// => ['find']
+```
+
+### hasMatch
+
+```js
+haystack.filter([1, 2, 3], [5, 2, 1, 4]);
+// => true
+
+haystack.filter('a', ['b', 'a']);
+// => true
+
+haystack.filter(['c', 'd'], ['d', 'e', 'c']);
+// => true
+
+haystack.filter(['f', 'g'], 'f, h, i');
+// => false
+
+haystack.filter(['f', 'g'], 'f, h, i', ',');
+// => true
+```
 
 ## Contributing
 {%= _.contrib("contributing.md") %}

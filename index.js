@@ -13,7 +13,6 @@ var path = require('path');
 // node_modules
 var _ = require('lodash');
 
-
 function toArray(val, sep) {
   sep = sep || '';
   // Optionally define a separator to be used for splitting
